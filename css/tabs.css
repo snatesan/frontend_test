@@ -1,0 +1,50 @@
+#container {
+	position: relative;
+	min-height: 100px;
+}
+
+#container h3 {
+	display: inline-block;
+	float: left;
+	border-radius: 4px 4px 0 0;
+	margin: 0;
+	padding: 10px;
+	background-color: #000;
+	position: relative;
+	top: 3px;
+	border-top: 1px solid lightblue;
+	border-left: 1px solid lightblue;
+	z-index: 0;
+	cursor: pointer;
+}
+
+
+#container > p {
+	display: none;
+	margin: 0;
+	padding: 10px;
+	position: absolute;
+	top: 42px;
+	width: 100%;
+	z-index: 1;
+	background-color: #000;
+}
+
+#container h3.active {
+	border-right: 1px solid lightblue;
+	border-top-width: 2px;
+	z-index: 2;	
+	top: 0;
+}
+
+#container h3:last-of-type {
+	border-right: 1px solid lightblue;
+}
+
+#container h3.active + p {
+	display:block;
+	border: 1px solid lightblue;
+}
+
+
+

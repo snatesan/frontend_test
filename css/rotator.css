@@ -1,0 +1,160 @@
+
+#rotator {
+	position: relative;
+	min-height: 400px;
+	z-index: 0;
+}
+
+#rotator > div {
+	position:absolute;
+	left: 0;
+	right: 0;
+	background-color: #131313;
+
+	-webkit-animation-name: animephoto;
+	-webkit-animation-duration: 12s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: animephoto;
+	-moz-animation-duration: 12s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: animephoto;
+	animation-duration: 12s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+#rotator > div:first-child {
+	z-index: 2;
+	-webkit-animation-delay: 3s;
+	-moz-animation-delay: 3s;
+	animation-delay: 3s;
+}
+
+#rotator > div:nth-child(2) {
+	z-index: 1;
+	-webkit-animation-delay: 6s;
+	-moz-animation-delay: 6s;
+	animation-delay: 6s;
+}
+
+#rotator > div:nth-child(3) {
+	z-index: -1;
+	-webkit-animation-delay: 9s;
+	-moz-animation-delay: 9s;
+	animation-delay: 9s;
+}
+
+#rotator > div:last-child {
+	z-index: -2;
+	-webkit-animation-delay: 12s;
+	-moz-animation-delay: 12s;
+	animation-delay: 12s;
+}
+
+@-webkit-keyframes animephoto {
+	0% {
+		z-index: 2;
+	}
+
+	16% {
+		z-index: 2;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+		z-index: 2;
+	}
+
+	75% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	76% {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	99% {
+		z-index: 1;
+	}
+
+	100% {
+		z-index: 2;
+	}
+}
+
+@-moz-keyframes animephoto {
+	0% {
+		z-index: 2;
+	}
+
+	16% {
+		z-index: 2;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+		z-index: 2;
+	}
+
+	75% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	76% {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	99% {
+		z-index: 1;
+	}
+
+	100% {
+		z-index: 2;
+	}
+}
+
+@keyframes animephoto {
+	0% {
+		z-index: 2;
+	}
+
+	16% {
+		z-index: 2;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+		z-index: 2;
+	}
+
+	75% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	76% {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	99% {
+		z-index: 1;
+	}
+
+	100% {
+		z-index: 2;
+	}
+}
+
+
